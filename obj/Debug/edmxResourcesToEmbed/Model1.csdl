@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DisHekimiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="adminPanel">
+    <Key>
+      <PropertyRef Name="adminID" />
+    </Key>
+    <Property Name="adminID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="adminPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="hastaBilgileri">
+    <Key>
+      <PropertyRef Name="hastaBilgileriId" />
+    </Key>
+    <Property Name="hastaBilgileriId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="hastaAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="hastaSoyadi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="hastaTc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="hastaYasi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="hastaNumarasi" Type="Int32" />
+    <Property Name="hastaCinsiyeti" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Randevular" BaseType="DisHekimiModel.hastaBilgileri">
+    <Property Name="hastaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="hastaTedavisi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="tedaviTarihi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="tedaviSaati" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="tedaviUcreti" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="hastaAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="hastaSoyadi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="hastaTc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="hastaNumarasi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="hastaYasi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="hastaCinsiyeti" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Table">
+    <Key>
+      <PropertyRef Name="outId" />
+    </Key>
+    <Property Name="outId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="materialName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="materialPrice" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="materialDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="DisHekimiEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="adminPanel" EntityType="Self.adminPanel" />
+    <EntitySet Name="hastaBilgileri" EntityType="Self.hastaBilgileri" />
+    <EntitySet Name="Table" EntityType="Self.Table" />
+  </EntityContainer>
+</Schema>

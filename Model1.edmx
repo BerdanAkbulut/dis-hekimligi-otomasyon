@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DisHekimiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="adminPanel">
+          <Key>
+            <PropertyRef Name="adminID" />
+          </Key>
+          <Property Name="adminID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="adminPassword" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="hastaBilgileri">
+          <Key>
+            <PropertyRef Name="hastaBilgileriId" />
+          </Key>
+          <Property Name="hastaBilgileriId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="hastaAdi" Type="varchar" MaxLength="50" />
+          <Property Name="hastaSoyadi" Type="varchar" MaxLength="50" />
+          <Property Name="hastaTc" Type="varchar" MaxLength="50" />
+          <Property Name="hastaYasi" Type="varchar" MaxLength="50" />
+          <Property Name="hastaNumarasi" Type="int" />
+          <Property Name="hastaCinsiyeti" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Randevular">
+          <Key>
+            <PropertyRef Name="hastaId" />
+          </Key>
+          <Property Name="hastaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="hastaTedavisi" Type="varchar" MaxLength="50" />
+          <Property Name="tedaviTarihi" Type="varchar" MaxLength="50" />
+          <Property Name="tedaviSaati" Type="varchar" MaxLength="50" />
+          <Property Name="tedaviUcreti" Type="varchar" MaxLength="50" />
+          <Property Name="hastaAdi" Type="varchar" MaxLength="50" />
+          <Property Name="hastaSoyadi" Type="varchar" MaxLength="50" />
+          <Property Name="hastaTc" Type="varchar" MaxLength="50" />
+          <Property Name="hastaNumarasi" Type="varchar" MaxLength="50" />
+          <Property Name="hastaYasi" Type="varchar" MaxLength="50" />
+          <Property Name="hastaCinsiyeti" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Table">
+          <Key>
+            <PropertyRef Name="outId" />
+          </Key>
+          <Property Name="outId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="materialName" Type="varchar" MaxLength="50" />
+          <Property Name="materialPrice" Type="varchar" MaxLength="50" />
+          <Property Name="materialDate" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="DisHekimiModelStoreContainer">
+          <EntitySet Name="adminPanel" EntityType="Self.adminPanel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="hastaBilgileri" EntityType="Self.hastaBilgileri" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Randevular" EntityType="Self.Randevular" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table" EntityType="Self.Table" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DisHekimiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="adminPanel">
+          <Key>
+            <PropertyRef Name="adminID" />
+          </Key>
+          <Property Name="adminID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="adminPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="hastaBilgileri">
+          <Key>
+            <PropertyRef Name="hastaBilgileriId" />
+          </Key>
+          <Property Name="hastaBilgileriId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="hastaAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="hastaSoyadi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="hastaTc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="hastaYasi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="hastaNumarasi" Type="Int32" />
+          <Property Name="hastaCinsiyeti" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Randevular" BaseType="DisHekimiModel.hastaBilgileri">
+          <Property Name="hastaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="hastaTedavisi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="tedaviTarihi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="tedaviSaati" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="tedaviUcreti" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="hastaAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="hastaSoyadi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="hastaTc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="hastaNumarasi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="hastaYasi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="hastaCinsiyeti" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Table">
+          <Key>
+            <PropertyRef Name="outId" />
+          </Key>
+          <Property Name="outId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="materialName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="materialPrice" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="materialDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="DisHekimiEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="adminPanel" EntityType="Self.adminPanel" />
+          <EntitySet Name="hastaBilgileri" EntityType="Self.hastaBilgileri" />
+          <EntitySet Name="Table" EntityType="Self.Table" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DisHekimiModelStoreContainer" CdmEntityContainer="DisHekimiEntities2">
+          <EntitySetMapping Name="adminPanel">
+            <EntityTypeMapping TypeName="DisHekimiModel.adminPanel">
+              <MappingFragment StoreEntitySet="adminPanel">
+                <ScalarProperty Name="adminID" ColumnName="adminID" />
+                <ScalarProperty Name="adminPassword" ColumnName="adminPassword" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hastaBilgileri">
+            <EntityTypeMapping TypeName="IsTypeOf(DisHekimiModel.hastaBilgileri)">
+              <MappingFragment StoreEntitySet="hastaBilgileri">
+                <ScalarProperty Name="hastaBilgileriId" ColumnName="hastaBilgileriId" />
+                <ScalarProperty Name="hastaCinsiyeti" ColumnName="hastaCinsiyeti" />
+                <ScalarProperty Name="hastaNumarasi" ColumnName="hastaNumarasi" />
+                <ScalarProperty Name="hastaYasi" ColumnName="hastaYasi" />
+                <ScalarProperty Name="hastaTc" ColumnName="hastaTc" />
+                <ScalarProperty Name="hastaSoyadi" ColumnName="hastaSoyadi" />
+                <ScalarProperty Name="hastaAdi" ColumnName="hastaAdi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="IsTypeOf(DisHekimiModel.Randevular)">
+              <MappingFragment StoreEntitySet="Randevular">
+                
+                
+                
+                
+                
+                
+                <ScalarProperty Name="tedaviUcreti" ColumnName="tedaviUcreti" />
+                <ScalarProperty Name="tedaviSaati" ColumnName="tedaviSaati" />
+                <ScalarProperty Name="tedaviTarihi" ColumnName="tedaviTarihi" />
+                <ScalarProperty Name="hastaTedavisi" ColumnName="hastaTedavisi" />
+                <ScalarProperty Name="hastaId" ColumnName="hastaId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table">
+            <EntityTypeMapping TypeName="DisHekimiModel.Table">
+              <MappingFragment StoreEntitySet="Table">
+                <ScalarProperty Name="outId" ColumnName="outId" />
+                <ScalarProperty Name="materialName" ColumnName="materialName" />
+                <ScalarProperty Name="materialPrice" ColumnName="materialPrice" />
+                <ScalarProperty Name="materialDate" ColumnName="materialDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

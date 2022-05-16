@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DisHekimiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="adminPanel">
+    <Key>
+      <PropertyRef Name="adminID" />
+    </Key>
+    <Property Name="adminID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="adminPassword" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="hastaBilgileri">
+    <Key>
+      <PropertyRef Name="hastaBilgileriId" />
+    </Key>
+    <Property Name="hastaBilgileriId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="hastaAdi" Type="varchar" MaxLength="50" />
+    <Property Name="hastaSoyadi" Type="varchar" MaxLength="50" />
+    <Property Name="hastaTc" Type="varchar" MaxLength="50" />
+    <Property Name="hastaYasi" Type="varchar" MaxLength="50" />
+    <Property Name="hastaNumarasi" Type="int" />
+    <Property Name="hastaCinsiyeti" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Randevular">
+    <Key>
+      <PropertyRef Name="hastaId" />
+    </Key>
+    <Property Name="hastaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="hastaTedavisi" Type="varchar" MaxLength="50" />
+    <Property Name="tedaviTarihi" Type="varchar" MaxLength="50" />
+    <Property Name="tedaviSaati" Type="varchar" MaxLength="50" />
+    <Property Name="tedaviUcreti" Type="varchar" MaxLength="50" />
+    <Property Name="hastaAdi" Type="varchar" MaxLength="50" />
+    <Property Name="hastaSoyadi" Type="varchar" MaxLength="50" />
+    <Property Name="hastaTc" Type="varchar" MaxLength="50" />
+    <Property Name="hastaNumarasi" Type="varchar" MaxLength="50" />
+    <Property Name="hastaYasi" Type="varchar" MaxLength="50" />
+    <Property Name="hastaCinsiyeti" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Table">
+    <Key>
+      <PropertyRef Name="outId" />
+    </Key>
+    <Property Name="outId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="materialName" Type="varchar" MaxLength="50" />
+    <Property Name="materialPrice" Type="varchar" MaxLength="50" />
+    <Property Name="materialDate" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="DisHekimiModelStoreContainer">
+    <EntitySet Name="adminPanel" EntityType="Self.adminPanel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hastaBilgileri" EntityType="Self.hastaBilgileri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Randevular" EntityType="Self.Randevular" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Table" EntityType="Self.Table" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

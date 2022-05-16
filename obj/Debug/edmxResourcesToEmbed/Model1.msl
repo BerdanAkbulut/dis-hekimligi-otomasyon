@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DisHekimiModelStoreContainer" CdmEntityContainer="DisHekimiEntities2">
+    <EntitySetMapping Name="adminPanel">
+      <EntityTypeMapping TypeName="DisHekimiModel.adminPanel">
+        <MappingFragment StoreEntitySet="adminPanel">
+          <ScalarProperty Name="adminID" ColumnName="adminID" />
+          <ScalarProperty Name="adminPassword" ColumnName="adminPassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hastaBilgileri">
+      <EntityTypeMapping TypeName="IsTypeOf(DisHekimiModel.hastaBilgileri)">
+        <MappingFragment StoreEntitySet="hastaBilgileri">
+          <ScalarProperty Name="hastaBilgileriId" ColumnName="hastaBilgileriId" />
+          <ScalarProperty Name="hastaCinsiyeti" ColumnName="hastaCinsiyeti" />
+          <ScalarProperty Name="hastaNumarasi" ColumnName="hastaNumarasi" />
+          <ScalarProperty Name="hastaYasi" ColumnName="hastaYasi" />
+          <ScalarProperty Name="hastaTc" ColumnName="hastaTc" />
+          <ScalarProperty Name="hastaSoyadi" ColumnName="hastaSoyadi" />
+          <ScalarProperty Name="hastaAdi" ColumnName="hastaAdi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(DisHekimiModel.Randevular)">
+        <MappingFragment StoreEntitySet="Randevular">
+          <ScalarProperty Name="tedaviUcreti" ColumnName="tedaviUcreti" />
+          <ScalarProperty Name="tedaviSaati" ColumnName="tedaviSaati" />
+          <ScalarProperty Name="tedaviTarihi" ColumnName="tedaviTarihi" />
+          <ScalarProperty Name="hastaTedavisi" ColumnName="hastaTedavisi" />
+          <ScalarProperty Name="hastaId" ColumnName="hastaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Table">
+      <EntityTypeMapping TypeName="DisHekimiModel.Table">
+        <MappingFragment StoreEntitySet="Table">
+          <ScalarProperty Name="outId" ColumnName="outId" />
+          <ScalarProperty Name="materialName" ColumnName="materialName" />
+          <ScalarProperty Name="materialPrice" ColumnName="materialPrice" />
+          <ScalarProperty Name="materialDate" ColumnName="materialDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

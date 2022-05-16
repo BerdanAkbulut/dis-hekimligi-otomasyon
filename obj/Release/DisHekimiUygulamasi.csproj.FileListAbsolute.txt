@@ -1,0 +1,15 @@
+C:\Users\omeru\source\repos\DisHekimiUygulamasi\DisHekimiUygulamasi\obj\Release\DisHekimiUygulamasi.csproj.AssemblyReference.cache
+C:\Users\omeru\source\repos\DisHekimiUygulamasi\DisHekimiUygulamasi\obj\Release\DisHekimiUygulamasi.Anasayfa.resources
+C:\Users\omeru\source\repos\DisHekimiUygulamasi\DisHekimiUygulamasi\obj\Release\DisHekimiUygulamasi.BugunkiRandevular.resources
+C:\Users\omeru\source\repos\DisHekimiUygulamasi\DisHekimiUygulamasi\obj\Release\DisHekimiUygulamasi.DemirbaşListesi.resources
+C:\Users\omeru\source\repos\DisHekimiUygulamasi\DisHekimiUygulamasi\obj\Release\DisHekimiUygulamasi.Giris_Ekrani.resources
+C:\Users\omeru\source\repos\DisHekimiUygulamasi\DisHekimiUygulamasi\obj\Release\DisHekimiUygulamasi.Günlük_Randevu_Ekranı.resources
+C:\Users\omeru\source\repos\DisHekimiUygulamasi\DisHekimiUygulamasi\obj\Release\DisHekimiUygulamasi.Hasta_Bilgileri.resources
+C:\Users\omeru\source\repos\DisHekimiUygulamasi\DisHekimiUygulamasi\obj\Release\DisHekimiUygulamasi.HastaEkleme.resources
+C:\Users\omeru\source\repos\DisHekimiUygulamasi\DisHekimiUygulamasi\obj\Release\DisHekimiUygulamasi.MalzemeEkle.resources
+C:\Users\omeru\source\repos\DisHekimiUygulamasi\DisHekimiUygulamasi\obj\Release\DisHekimiUygulamasi.Properties.Resources.resources
+C:\Users\omeru\source\repos\DisHekimiUygulamasi\DisHekimiUygulamasi\obj\Release\DisHekimiUygulamasi.RandevuEkleme.resources
+C:\Users\omeru\source\repos\DisHekimiUygulamasi\DisHekimiUygulamasi\obj\Release\DisHekimiUygulamasi.RandevuKayıtEkranı.resources
+C:\Users\omeru\source\repos\DisHekimiUygulamasi\DisHekimiUygulamasi\obj\Release\DisHekimiUygulamasi.Randevu_Listesi.resources
+C:\Users\omeru\source\repos\DisHekimiUygulamasi\DisHekimiUygulamasi\obj\Release\DisHekimiUygulamasi.csproj.GenerateResource.cache
+C:\Users\omeru\source\repos\DisHekimiUygulamasi\DisHekimiUygulamasi\obj\Release\DisHekimiUygulamasi.csproj.CoreCompileInputs.cache
